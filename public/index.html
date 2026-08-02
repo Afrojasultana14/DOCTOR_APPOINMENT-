@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Doctor Patient Appointment System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Doctor Patient Appointment System</h1>
+
+        <h2>Available Doctors</h2>
+
+        <div id="doctorList"></div>
+
+        <h2>Book an Appointment</h2>
+
+        <form id="appointmentForm">
+
+            <input
+                type="text"
+                id="patientName"
+                placeholder="Enter patient name"
+                required
+            >
+
+            <input
+                type="text"
+                id="patientPhone"
+                placeholder="Enter phone number"
+                required
+            >
+
+            <select id="doctorSelect" required>
+
+                <option value="">
+                    Select Doctor
+                </option>
+
+            </select>
+
+            <input
+                type="date"
+                id="appointmentDate"
+                required
+            >
+
+            <button type="submit">
+                Book Appointment
+            </button>
+
+        </form>
+
+        <p id="message"></p>
+
+        <h2>Booked Appointments</h2>
+
+        <div id="appointmentList"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
