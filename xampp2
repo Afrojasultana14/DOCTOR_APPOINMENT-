@@ -1,0 +1,45 @@
+CREATE DATABASE IF NOT EXISTS doctor_appoinment_db;
+
+USE doctor_appoinment_db;
+
+CREATE TABLE doctors (
+    doctor_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    specialization VARCHAR(100) NOT NULL,
+    phone VARCHAR(20)
+);
+
+CREATE TABLE appointments (
+    appointment_id INT AUTO_INCREMENT PRIMARY KEY,
+    patient_name VARCHAR(100) NOT NULL,
+    patient_phone VARCHAR(20) NOT NULL,
+    doctor_id INT NOT NULL,
+    appointment_date DATE NOT NULL,
+    appointment_time TIME NOT NULL,
+
+    FOREIGN KEY (doctor_id)
+    REFERENCES doctors(doctor_id)
+);
+
+INSERT INTO doctors
+(name, specialization, phone)
+
+VALUES
+
+(
+    'Dr. Rahim Ahmed',
+    'Cardiologist',
+    '01700000000'
+),
+
+(
+    'Dr. Karim Hasan',
+    'Neurologist',
+    '01800000000'
+),
+
+(
+    'Dr. Salma Akter',
+    'Gynecologist',
+    '01900000000'
+);
